@@ -47,13 +47,22 @@ We want ESLint to handle style because Prettier is handling formatting.
 Install ESLint and config files/plugins:
 `npm i -D eslint eslint-config-prettier eslint-plugin-prettier`
 
-
+We also want ESLint to process JSX and React files, add linting rules around import/export, tell us best accessibility practices, 
+Install:
+`npm i -D babel-eslint eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react`
 
 Add a `.eslintrc.json` file and add:
 ```
 {
-  "extends": ["eslint:recommended", "prettier", "prettier/react"],
-  "plugins": [],
+  "extends": [
+    "eslint:recommended",
+    "plugin:import/errors",
+    "plugin:react/recommended",
+    "plugin:jsx-a11y/recommended",
+    "prettier",
+    "prettier/react"
+  ],
+  "plugins": ["react", "import", "jsx-a11y"],
   "parserOptions": {
     "ecmaVersion": 2018,
     "sourceType": "module",
