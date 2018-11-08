@@ -21,6 +21,24 @@ A document outlining my recommended React setup and tooling
 
 ## 1. Prettier
 
+### Method 1: VSCode Extension
+Add the prettier extension and add a `.prettierrc` file and put `{}` for the default configuration. 
+
+In your workspace settings in VSCode you want the following settings:
+```
+"prettier.requireConfig": true,
+"editor.formatOnSave": true
+```
+This setting says to only run prettier when you have a prettierrc file, and to format automatically when you save a file. 
+
+### Method 2: Add Prettier CLI Script
+`npm install -D prettier`
+
+Add something like the following to your scripts object:
+`"format": "prettier --write \"src/**/*.{js,jsx,css,json}\""`
+
+To run prettier, run `npm run format`
+
 ---
 
 ## 2. ESLint
