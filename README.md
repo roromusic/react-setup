@@ -79,6 +79,22 @@ You can make it so that your build fails if it doesn't pass ESLint.
 ---
 
 ## 3. Parcel
+Parcel is fantastic because it is zero-config. Just tell it your index.html file and it does the rest. 
+
+`npm install -D parcel-bundler`
+
+In your npm scripts:
+```
+"dev": "parcel src/index.html"
+```
+
+..and that's it!
+Out of the box, it can handle TypeScript, SASS, JSX, etc, and handles minification, gzip, and code splitting out of the box.
+
+Running `npm run dev` will not only bundle your file, but will serve the build and comes with hot module replacement out of the box. 
+
+It's also cool to note that Parcel will install packages for you. 
+If you type `import React from 'react'`, it will automatically add it to your package.json file. 
 
 ---
 
