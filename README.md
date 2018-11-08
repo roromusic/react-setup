@@ -89,12 +89,10 @@ In your npm scripts:
 ```
 
 ..and that's it!
-Out of the box, it can handle TypeScript, SASS, JSX, etc, and handles minification, gzip, and code splitting out of the box.
+Out of the box, it can handle TypeScript, SASS, JSX, etc, and handles minification, gzip, and code splitting out of the box, and does the React transformations for you (via babel).
 
 Running `npm run dev` will not only bundle your file, but will serve the build and comes with hot module replacement out of the box. 
-
-It's also cool to note that Parcel will install packages for you. 
-If you type `import React from 'react'`, it will automatically add it to your package.json file. 
+It's also cool to note that Parcel will install packages for you. If you type `import React from 'react'`, it will automatically add it to your package.json file. 
 
 ---
 
