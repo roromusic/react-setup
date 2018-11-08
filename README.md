@@ -43,6 +43,39 @@ To run prettier, run `npm run format`
 
 ## 2. ESLint
 
+We want ESLint to handle style because Prettier is handling formatting. 
+Install ESLint and config files/plugins:
+`npm i -D eslint eslint-config-prettier eslint-plugin-prettier`
+
+
+
+Add a `.eslintrc.json` file and add:
+```
+{
+  "extends": ["eslint:recommended", "prettier", "prettier/react"],
+  "plugins": [],
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true
+  }
+}
+```
+
+You can install the VSCode plugin to automatically check for you
+
+### Add ESLint CLI Script
+You can make it so that your build fails if it doesn't pass ESLint.
+
+`"lint": "eslint **/*.{js,jsx} --quiet"`
+
 ---
 
 ## 3. Parcel
